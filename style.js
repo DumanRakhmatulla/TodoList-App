@@ -18,6 +18,8 @@ function updateTodoList() {
     li.style.height = "50px";
 
     const span = document.createElement("span");
+    span.classList.add("my_span");
+    span.style.paddingLeft = "10px";
     span.textContent = text;
 
     const trach_icon = document.createElement("img");
@@ -31,7 +33,7 @@ function updateTodoList() {
     plus_icon.style.width = "20px";
 
     const deleteButton = document.createElement("button");
-    deleteButton.classList.add("btn", "btn-sm", "ml-2");
+    deleteButton.classList.add("btn", "btn-sm", "mr-2");
     deleteButton.style.backgroundColor = "#8540f5";
     deleteButton.style.color = "white";
     deleteButton.addEventListener("click", () => deleteClass(index));
@@ -43,8 +45,10 @@ function updateTodoList() {
     editButton.addEventListener("click", () => editClass(index));
 
     const div = document.createElement("div");
+    div.classList.add("my");
     div.style.display = "flex";
     div.style.gap = "10px";
+    div.style.paddingRight = "10px";
 
     editButton.appendChild(plus_icon);
     deleteButton.appendChild(trach_icon);
