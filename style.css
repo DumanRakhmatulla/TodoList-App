@@ -1,0 +1,14 @@
+.text-center {
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #8540f5;
+}
+
+#todoList {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  /* width: 100%; */
+}
