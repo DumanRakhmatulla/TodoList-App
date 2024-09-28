@@ -85,4 +85,20 @@ function editClass(index) {
   }
 }
 
+function saveTodos() {
+  localStorage.setItem("todos", JSON.stringify(tasks));
+}
+
+window.addEventListener("beforeunload", saveTodos);
+
+function loadTodos() {
+  const storedTodos = localStorage.getItem("todos");
+  if (storedTodos) {
+    tasks = JSON.parse(storedTodos);
+    updateTodoList();
+  }
+}
+
+loadTodos();
+
 updateTodoList();
